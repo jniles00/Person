@@ -20,9 +20,15 @@ public class Runner {
 		people.addPeople(perTwo);
 		people.addPeople(perThree);
 	
-		// Using the Search For Person method
-		System.out.println("Searching for Jimothy");
-		people.SearchForPerson("Jimothy");
+		// Using the Find By Name Loop method
+		System.out.println("Finding Jimothy using for loop \n");
+		System.out.println(people.FindByNameLoop("Jimothy"));
+		
+		System.out.println("=".repeat(20));
+
+		// Using the Find By Name Stream method
+		System.out.println("Finding Elizabeth using stream method \n");
+		people.FindByNameStream("Elizabeth");
 		
 		System.out.println("=".repeat(20));
 		

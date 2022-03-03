@@ -25,16 +25,23 @@ public class People {
 	}
 	
 	// Searches for a person within the people array based on their name as a String
-	public void SearchForPerson(String name)
+	public Person FindByNameLoop(String name)
 	{
 		for(Person person : peopleArr)
 		{	// If the name passed through the method is equal to a name of a person in the people array.
 			// It will return that person objects details
 			if(name == person.getName())
 			{
-				System.out.println(person);
+				return person;
 			}
-		}	
+		}
+		return null;	
+	}
+	
+	// Finding by name using the stream method
+	public void FindByNameStream(String name) 
+	{
+		this.peopleArr.stream().forEach(p -> {if(p.getName().equalsIgnoreCase(name))System.out.println(p);});
 	}
 	
 	// Outputs all the person objects stored within the people array into the console
